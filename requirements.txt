@@ -6,3 +6,5 @@ wget
 opencv-python
 configparser
 Pillow
+flask
+venv
