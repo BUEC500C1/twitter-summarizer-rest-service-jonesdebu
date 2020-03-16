@@ -74,8 +74,8 @@ def vid_creator(images, dir_name, vid_name):
         print()
 
     if '.avi' not in vid_name:
-        vid_name = vid_name + '.avi'
-        return
+        vid_name = str(vid_name) + '.avi'
+
 
 #downlaod images and move them to the media folder
     count = 0
@@ -143,17 +143,3 @@ def vid_creator(images, dir_name, vid_name):
     out.release()
     #move the video to the media directory
     shutil.move(vid_name, dir_name)
-
-
-
-
-
-api = create_api("keys")
-
-#test to put in pytest
-images = user_images(api, 'Donovan01060515')
-print(len(images))
-
-
-
-vid_creator(images, 'media', 'my_vid.avi')
