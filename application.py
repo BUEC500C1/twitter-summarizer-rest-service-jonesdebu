@@ -2,8 +2,8 @@ from flask import Flask, send_file, send_from_directory
 from flask_restful import Resource, Api
 from twitter_api import create_api, user_images, vid_creator
 
-app = Flask(__name__)
-api = Api(app)
+application = Flask(__name__)
+api = Api(application)
 
 #arguments hardcoded until solution to passing arguments int the get function is found.
 
@@ -37,4 +37,4 @@ api.add_resource(DownloadVideo, '/downloadvideo')
 
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+    application.run(debug=True, port=5000)

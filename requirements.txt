@@ -1,10 +1,8 @@
 tweepy
 imageio
-Numpy
 requests
 wget
 opencv-python
 configparser
 Pillow
 flask
-venv
